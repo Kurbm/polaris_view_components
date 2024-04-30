@@ -34,6 +34,7 @@ module Polaris
       name: nil,
       selected: [],
       disabled: false,
+      required: false,
       error: nil,
       **system_arguments
     )
@@ -45,6 +46,7 @@ module Polaris
       @name = name
       @selected = selected
       @disabled = disabled
+      @required = required
 
       @system_arguments = system_arguments
       @system_arguments[:as] = :fieldset
