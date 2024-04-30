@@ -49,7 +49,7 @@ module Polaris
         label: label,
         label_hidden: label_hidden,
         disabled: disabled,
-        required: required
+        required: required,
         help_text: help_text,
         error: error
       }.merge(wrapper_arguments)
