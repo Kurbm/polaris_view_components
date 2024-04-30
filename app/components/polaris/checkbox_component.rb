@@ -18,6 +18,7 @@ module Polaris
       disabled: false,
       multiple: false,
       help_text: nil,
+      required: false,
       error: nil,
       value: "1",
       unchecked_value: "0",
@@ -31,6 +32,7 @@ module Polaris
       @checked = checked
       @disabled = disabled
       @multiple = multiple
+      @required = required
       @value = value
       @unchecked_value = unchecked_value
 
@@ -47,6 +49,7 @@ module Polaris
         label: label,
         label_hidden: label_hidden,
         disabled: disabled,
+        required: required
         help_text: help_text,
         error: error
       }.merge(wrapper_arguments)
@@ -79,6 +82,7 @@ module Polaris
         checked: @checked,
         disabled: @disabled,
         multiple: @multiple,
+        required: @required,
         value: @value,
         unchecked_value: @unchecked_value,
         **@input_options
