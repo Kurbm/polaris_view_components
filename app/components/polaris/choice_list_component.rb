@@ -11,6 +11,7 @@ module Polaris
         checked: @selected.include?(value),
         disabled: disabled || @disabled,
         multiple: true,
+        required: required || @required,
         **system_arguments
       )
     end
@@ -22,6 +23,7 @@ module Polaris
         value: value,
         checked: @selected.include?(value),
         disabled: disabled || @disabled,
+        required: required || @required,
         **system_arguments
       )
     end
