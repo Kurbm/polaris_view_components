@@ -38,7 +38,11 @@ export default class extends Controller {
       this.inputTarget.value = label
       if (this.hasHiddenInputTarget)
         this.hiddenInputTarget.value = input.value
-    }
+    } else {
+			const selectedOptions = this.resultsTarget.querySelectorAll('input[type="checkbox"]:checked')
+      const selectedLabels = Array.from(selectedOptions).map(option => option.closest('li').dataset.label)
+      this.inputTarget.value = selectedLabels.join(', ')
+		}
   }
 
   onInputChange = debounce(() => {
